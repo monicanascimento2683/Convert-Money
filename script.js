@@ -40,25 +40,21 @@ function convertValues() {
   console.log(convertedValue);
 }
 
-function changeCurrency(){
-    const currencyName = document.getElementById("currency-name")
-    const currencyImage = document.querySelector("currency-img")
+function changeCurrency() {
+  const currencyName = document.getElementById("currency-name");
+  const currencyImage = document.querySelector(".currency-image");
 
-    if (currencySelect.value =="dolar") {
+  if (currencySelect.value == "dolar") {
+    currencyName.innerHTML = "Dólar americano";
+    currencyImage.src = "./assets/logo.dolar.png";
+  }
 
-        currencyName.innerHTML = "Dólar americano"
-        currencyImage.src = "./assets/logo.dolar.png"
-    
-    }
-
-    if (currencySelect.value =="euro") {
-        
-        currencyName.innerHTML = "Euro"
-        currencyImage.src = "./assets/logo.euro.png"
-
-    }
-
+  if (currencySelect.value == "euro") {
+    currencyName.innerHTML = "Euro";
+    currencyImage.src = "./assets/logo.euro.png";
+  }
+  convertValues();
 }
 
-currencySelect.addEventListener("change", changeCurrency )
+currencySelect.addEventListener("change", changeCurrency);
 convertButton.addEventListener("click", convertValues);
