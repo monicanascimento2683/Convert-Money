@@ -47,15 +47,14 @@ function changeCurrency(){
     if (currencySelect.value =="dolar") {
 
         currencyName.innerHTML = "Dólar americano"
-        
-        
-
+        currencyImage.src = "./assets/logo.dolar.png"
+    
     }
 
     if (currencySelect.value =="euro") {
         
         currencyName.innerHTML = "Euro"
-        
+        currencyImage.src = "./assets/logo.euro.png"
 
     }
 
